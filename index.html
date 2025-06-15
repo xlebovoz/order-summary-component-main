@@ -5,39 +5,188 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
   <title>Frontend Mentor | Order summary card</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    .attribution { 
+      font-size: 11px; 
+      text-align: center; 
+      position: fixed; /* вместо absolute */
+      bottom: 5px;
+      width: 100%; /* чтобы растянуть по всей ширине */
+    }
+
+    .attribution a { 
+      color: hsl(228, 45%, 44%); 
+    }
+
+    body {
+      background-color: hsl(225, 100%, 94%);
+      font-family: 'Red Hat Display', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+    }
+
+    p {
+      font-size: 16px;
+    }
+
+    h2 {
+      color: hsl(223, 47%, 23%);
+      font-weight: 900;
+    }
+
+    .main {
+      margin-top: 75px;
+      text-align: center;
+      background-color: hsl(0, 0%, 100%);
+      width: 450px;
+      height: auto;
+      border-radius: 20px;
+    }
+
+    #text {
+      margin-left: 10px;
+      margin-right: 10px;
+      color: hsl(224, 23%, 55%);
+      font-weight: 700;
+    }
+
+    .content {
+      padding: 20px;
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+
+    .main img {
+      width: 100%;
+      display: block;
+      border-top-right-radius: 20px;
+      border-top-left-radius: 20px;
+    }
+
+    .plan {
+      margin-top: 20px;
+      margin-bottom: 30px;
+      border-radius: 10px;
+      background-color: hsl(225, 100%, 98%);
+      padding: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .plan-left {
+      display: flex;
+      margin-left: 10px;
+      align-items: center;
+    }
+
+    .plan-left img {
+      width: 45px;
+      height: auto;
+      margin-right: 10px; /* Отступ между иконкой и текстом */
+    }
+
+    .plan-details {
+      display: flex;
+      flex-direction: column; /* Вертикальное расположение текста */
+    }
+
+    .plantext {
+      margin-bottom: -15px;
+      font-weight: 900;
+      color: hsl(223, 47%, 23%);
+    }
+
+    .plan-price {
+      color: hsl(224, 23%, 55%);
+      font-size: 16px;
+      font-weight: 700;
+    }
+
+    .change-link {
+      cursor: pointer;
+      text-decoration: underline;
+      font-weight: 700;
+      color: hsl(245, 75%, 52%);
+      padding-right: 10px;
+    }
+
+    .change-link:hover {
+      color: hsla(245, 75%, 52%, 0.565);
+      text-decoration: none;
+    }
+
+    .btn {
+      background-color: hsl(245, 75%, 52%);
+      color: hsl(0, 0%, 100%);
+      font-weight: 700;
+      padding: 15px;
+      border-radius: 10px;
+      margin-bottom: 30px;
+      box-shadow: 0px 10px 20px hsla(245, 75%, 52%, 0.298);
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background-color: hsla(245, 75%, 52%, 0.565);
+    }
+
+    #cancel {
+      color: hsl(224, 23%, 55%);
+      font-weight: 900;
+      cursor: pointer;
+    }
+
+    #cancel:hover {
+      color: hsl(223, 47%, 23%);
+    }
+
   </style>
 </head>
 <body>
 
 
   <div class="main">
-  <h2>Order Summary</h2>
 
-  <p>You can now listen to millions of songs, audiobooks, and podcasts on any 
-  device anywhere you like!</p>
+    <img src="images/illustration-hero.svg" alt="song-hero">
 
-  <div>Annual Plan
-  $59.99/year
 
-  Change</div>
+    <div class="content">
+      <h2>Order Summary</h2>
 
-  <div>
-  Proceed to Payment
+      <p id="text">You can now listen to millions of songs, audiobooks, and podcasts on any 
+      device anywhere you like!</p>
 
-  Cancel Order
+      <div class="plan">
+        <div class="plan-left">
+          <img src="images/icon-music.svg" alt="music" />
+          <div class="plan-details">
+            <p class="plantext">Annual Plan</p>
+            <p class="plan-price">$59.99/year</p>
+          </div>
+        </div>
+        <div class="change-link">Change</div>
+      </div>
+
+      <div class="btn">
+        Proceed to Payment
+      </div>
+
+      <p id="cancel">Cancel Order</p>
+
+    </div>
 
   </div>
-  
+
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="https://github.com/xlebovoz">XLEBOVOZ</a>.
   </div>
 </body>
 </html>
