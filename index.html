@@ -18,6 +18,19 @@
       width: 100%; /* чтобы растянуть по всей ширине */
     }
 
+    .bg {
+      position: fixed;
+      z-index: -1;
+      width: 100%;
+      top: 0px;
+    }
+
+    @media (max-width: 768px) {
+      .bg {
+        background-image: url('images/pattern-background-mobile.svg');
+      }
+    }
+
     .attribution a { 
       color: hsl(228, 45%, 44%); 
     }
@@ -150,6 +163,8 @@
   </style>
 </head>
 <body>
+
+  <img src="images/pattern-background-desktop.svg" alt="bg" class="bg">
 
 
   <div class="main">
